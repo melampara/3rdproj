@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+            body{
+
+                    background-image: url('https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80');
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: 100% 100%;
+                }
+    </style>
+
+</head>
+
+<body>
+<form action="register" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Enter your UserName"><br>
+        <input type="text" name="first_name" placeholder="Enter your firstname"><br>
+        <input type="text" name="last_name" placeholder="Enter your lastname"><br>
+        <input type="email" name="email" placeholder="Enter your email"><br>
+        <input type="password" name="password" placeholder="Enter your password"><br>
+        <input type="password" name="password1" placeholder="confirm your password"><br>
+        <input type="submit"><br>
+
+</form>
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+</body>
+
+</html>
+

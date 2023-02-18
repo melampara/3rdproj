@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style>
+            body{
+
+                    background-image: url('https://images.unsplash.com/photo-1508615039623-a25605d2b022?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: 100% 100%;
+                }
+    </style>
+</head>
+<body>
+<form action="login" method="POST">
+  {% csrf_token %}
+  <input type="text" name="username" placeholder="Enter your UserName"><br>
+    <input type="password" name="password" placeholder="Enter your password"><br>
+    <input type="submit">
+</form>
+
+</body>
+</html>
